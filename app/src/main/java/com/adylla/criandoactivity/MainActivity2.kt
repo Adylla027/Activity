@@ -1,6 +1,9 @@
 package com.adylla.criandoactivity
 
+import android.os.Build
 import android.os.Bundle
+import android.util.Log
+import android.content.Intent
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -13,17 +16,22 @@ class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding=ActivityMain2Binding.inflate(layoutInflater)
+
         setContentView(binding.root)
 
-        val toolbar: androidx.appcompat.widget.Toolbar = binding.toolbar
+        val toolbar: androidx.appcompat.widget.Toolbar = binding.toolbar2
         toolbar.title = "Tela 2"
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+
     }
 
-    override fun onSupportNavigateUp():Boolean{
+
+    override fun onSupportNavigateUp(): Boolean {
         finish()
         return true
     }
+
+
 }

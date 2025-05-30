@@ -14,13 +14,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         initListeners()
     }
 
     private fun initListeners(){
         binding.bttnNext.setOnClickListener {
-            startActivity(Intent(this,MainActivity2::class.java))
+            val intent = Intent(this, MainActivity2::class.java)
+            intent.putExtra("user", User("Adylla", 18))
+            startActivity(intent)
         }
     }
 }
